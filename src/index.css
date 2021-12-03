@@ -194,8 +194,12 @@ button {
   width: 550px;
 }
 
+.separator {
+  height: 18px;
+}
+
 #btn-calcular {
-  margin: 28px;
+  margin: 20px;
 }
 
 .opcs {
