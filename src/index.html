@@ -9,13 +9,70 @@
 </head>
 
 <body>
-  <h1>Hash Calculator</h1>
-  <input type="text" id="texto">
-  <button>calcular</button>
-  <div>
-    <p>MD5:</p>
-    <textarea id="md5"></textarea>
-  </div>
+  <!-- Sticky header -->
+  <header class="header-outer">
+    <div class="header-inner responsive-wrapper">
+      <div class="header-logo">
+        <img src="https://assets.codepen.io/285131/acme-2.svg" />
+      </div>
+    </div>
+  </header>
+  
+  <!-- Content -->
+  <main class="main">
+    <div class="general">
+
+      <div class="main-content responsive-wrapper">
+
+        <article class="widget">
+          <h2 class="header-mesagge">Texto &#128172;</h2>
+          <textarea class="message" id="message"></textarea>
+        </article>
+      </div>
+
+      <div class="function-content">
+        <article class="widget">
+          <h2>Función Hash</h2>
+          <p style="color: gray;">Algoritmo:</p>
+          <div id="menu" name="menu" class="opc-hash">
+            <select class="opcs" name="select">
+              <option value="" disabled selected>Seleccionar</option>
+              <option id="md4Op" name="option" value="md4Op">MD4</option>
+              <option id="md5Op" name="option" value="md5Op">MD5</option>
+              <option id="sha1Op" name="option" value="sha1Op">SHA1</option>
+              <option id="sha256" name="option" value="sha256">SHA256</option>
+            </select>
+          </div>
+          <br>
+          <button id="btn-calcular">Calcular</button>
+        </article>
+      </div>
+
+      <div class="main-content responsive-wrapper">
+        <article class="widget">
+          <h2>Resultado</h2>
+          <textarea class="message" id="resultado"></textarea>
+        </article>
+      </div>
+    </div>
+    
+    <div class="description">
+
+      <article class="widget-des">
+        <h2 class="header-mesagge">Algoritmos Soportados</h2>
+
+        <ul>
+          <li>MD4</li>
+          <li>MD5</li>
+          <li>SHA1</li>
+          <li>SHA256</li>
+        </ul>
+        
+      </article>
+    </div>
+
+  </main>
+
 </body>
 
 </html>
