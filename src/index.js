@@ -4,6 +4,11 @@ import sha256 from 'crypto-js/sha256';
 import hmacSHA512 from 'crypto-js/hmac-sha512';
 import hmacMD5 from 'crypto-js/hmac-md5';
 import hmacSHA1 from 'crypto-js/hmac-sha1';
+import hmacSHA256 from 'crypto-js/hmac-sha256';
+import hmacSHA224 from 'crypto-js/hmac-sha224';
+import hmacSHA384 from 'crypto-js/hmac-sha384';
+import hmacSHA3 from 'crypto-js/hmac-sha3';
+import hmacRIPEMD160 from 'crypto-js/hmac-ripemd160';
 
 import { default as md4 } from './md4';
 
@@ -41,5 +46,25 @@ btn.addEventListener('click', function () {
     const clave = document.querySelector('#key').value;
     const digesthmacSHA1 = hmacSHA1(mensaje, clave);
     result.value = digesthmacSHA1.toString();
+  } else if (seleccion[7].selected) {
+    const clave = document.querySelector('#key').value;
+    const digesthmacSHA256 = hmacSHA256(mensaje, clave);
+    result.value = digesthmacSHA256.toString();
+  } else if (seleccion[8].selected) {
+    const clave = document.querySelector('#key').value;
+    const digesthmacSHA224 = hmacSHA224(mensaje, clave);
+    result.value = digesthmacSHA224.toString();
+  } else if (seleccion[9].selected) {
+    const clave = document.querySelector('#key').value;
+    const digesthmacSHA384 = hmacSHA384(mensaje, clave);
+    result.value = digesthmacSHA384.toString();
+  } else if (seleccion[10].selected) {
+    const clave = document.querySelector('#key').value;
+    const digesthmacSHA3 = hmacSHA3(mensaje, clave);
+    result.value = digesthmacSHA3.toString();
+  } else if (seleccion[11].selected) {
+    const clave = document.querySelector('#key').value;
+    const digesthmacRIPEMD160 = hmacRIPEMD160(mensaje, clave);
+    result.value = digesthmacRIPEMD160.toString();
   }
 });
