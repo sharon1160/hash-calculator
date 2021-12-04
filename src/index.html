@@ -41,9 +41,15 @@
               <option id="md5Op" name="option" value="md5Op">MD5</option>
               <option id="sha1Op" name="option" value="sha1Op">SHA1</option>
               <option id="sha256" name="option" value="sha256">SHA256</option>
+              <option id="hmacsha512" name="option" value="hmacsha512">HMAC-SHA512</option>
+              <option id="hmacmd5" name="option" value="hmacmd5">HMAC-MD5</option>
+              <option id="hmacsha1" name="option" value="hmacsha1">HMAC-SHA1</option>
             </select>
           </div>
-          <div class="separator"></div>
+          <div class="separator">
+            <p style="color: gray;">Clave secreta:</p>
+            <input id="key" class="key"></input>
+          </div>
           <button id="btn-calcular">Calcular</button>
         </article>
       </div>
@@ -66,6 +72,9 @@
           <li>MD5</li>
           <li>SHA1</li>
           <li>SHA256</li>
+          <li>HMAC-SHA512</li>
+          <li>HMAC-MD5</li>
+          <li>HMAC-SHA1</li>
         </ul>
         
       </article>
