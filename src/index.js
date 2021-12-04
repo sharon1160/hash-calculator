@@ -14,6 +14,33 @@ import { default as md4 } from './md4';
 
 import './index.css';
 
+const selectElement = document.querySelector('.opcs');
+
+selectElement.addEventListener('change', (event) => {
+  let sel = document.querySelectorAll('option[name=option]');
+
+  if (
+    sel[0].selected ||
+    sel[1].selected ||
+    sel[2].selected ||
+    sel[3].selected
+  ) {
+    document.querySelector('#key').disabled = true;
+    document.querySelector('#key').value = '';
+  } else if (
+    sel[4].selected ||
+    sel[5].selected ||
+    sel[6].selected ||
+    sel[7].selected ||
+    sel[8].selected ||
+    sel[9].selected ||
+    sel[10].selected ||
+    sel[11].selected
+  ) {
+    document.querySelector('#key').disabled = false;
+  }
+});
+
 const btn = document.querySelector('#btn-calcular');
 const result = document.querySelector('#resultado');
 
